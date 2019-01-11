@@ -4,8 +4,9 @@
   "description": "An NodeJS MQTT API for the Data-Centric Design Hub",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test LOG_LEVEL=DEBUG MODEL_HOST=localhost API_URL=http://localhost:4478/api KETO_URL=http://localhost:4466 HYDRA_ADMIN_URL=http://localhost:4445 OAUTH2_TOKEN_URL=http://localhost:4444/oauth2/token MQTT_HOST=localhost OAUTH2_CLIENT_ID=dcd-api-mqtt OAUTH2_CLIENT_SECRET=mqtt-secret MQTT_USER=test MQTT_PASS=test MQTT_PORT=1883 CRYPTO_KEY=cryptoKeyToChange KAFKA=true KAFKA_HOST=192.168.1.101 KAFKA_PORT=9092 MQTT_PORT=1883 MQTT_HOST=localhost node index.js",
-    "mock": "NODE_ENV=test LOG_LEVEL=DEBUG MODEL_HOST=localhost API_URL=http://localhost:4478/api KETO_URL=http://localhost:4466 HYDRA_ADMIN_URL=http://localhost:4445 OAUTH2_TOKEN_URL=http://localhost:4444/oauth2/token MQTT_HOST=localhost OAUTH2_CLIENT_ID=dcd-api-mqtt OAUTH2_CLIENT_SECRET=mqtt-secret MQTT_PORT=1883 CRYPTO_KEY=cryptoKeyToChange KAFKA=true KAFKA_HOST=192.168.1.101 KAFKA_PORT=9092 node ./test/client.test.js"
+    "start": "node index.js",
+    "test": "NODE_ENV=test LOG_LEVEL=DEBUG MODEL_HOST=localhost API_URL=http://localhost:4478/api KETO_URL=http://localhost:4466 HYDRA_ADMIN_URL=http://localhost:4445 OAUTH2_TOKEN_URL=http://localhost:4444/oauth2/token MQTT_HOST=localhost OAUTH2_CLIENT_ID=dcd-api-mqtt OAUTH2_CLIENT_SECRET=mqtt-secret MQTT_USER=test MQTT_PASS=test MQTT_PORT=1883 CRYPTO_KEY=cryptoKeyToChange KAFKA=true KAFKA_HOST=10.0.1.16 KAFKA_PORT=9092 MQTT_PORT=1883 MQTT_HOST=localhost node index.js",
+    "mock": "NODE_ENV=test LOG_LEVEL=DEBUG MODEL_HOST=localhost API_URL=http://localhost:4478/api KETO_URL=http://localhost:4466 HYDRA_ADMIN_URL=http://localhost:4445 OAUTH2_TOKEN_URL=http://localhost:4444/oauth2/token MQTT_HOST=localhost OAUTH2_CLIENT_ID=dcd-api-mqtt OAUTH2_CLIENT_SECRET=mqtt-secret MQTT_PORT=1883 CRYPTO_KEY=cryptoKeyToChange KAFKA=true KAFKA_HOST=10.0.1.16 KAFKA_PORT=9092 node ./test/client.test.js"
   },
   "repository": {
     "type": "git",
