@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/datacentricdesign/dcd-api-mqtt#README",
   "dependencies": {
-    "dcd-model": "^0.0.22",
+    "dcd-model": "^0.0.23",
     "log4js": "^3.0.6",
     "mosca": "^2.8.3",
     "mqtt": "^2.18.8"
