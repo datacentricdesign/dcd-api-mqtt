@@ -78,9 +78,9 @@ class MQTTServer {
       subject: 'dcd:things:' + client.user.subject
     };
 
-    console.log(acp);
     this.auth.wardenSubject(acp)
-      .then(() => {
+      .then((result) => {
+        logger.info(result);
         logger.debug('authorised to publish on ' + topic);
         callback(null, true);
       })
