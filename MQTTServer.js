@@ -86,6 +86,7 @@ class MQTTServer {
       })
       .catch(() => {
         const message = 'NOT authorised to publish on ' + topic;
+        logger.error(message);
         callback(new Error(message), false);
       });
   }
