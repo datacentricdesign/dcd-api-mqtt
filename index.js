@@ -13,6 +13,8 @@ const model = new DCDModel();
 
 const settings = {
     host: process.env.MQTT_HOST || 'mqtt',
+    port: process.env.MQTT_PORT !== undefined
+      ? parseInt(process.env.MQTT_PORT) : 8883,
     client: {
         keepalive: 1000,
         protocolId: 'MQIsdp',
@@ -22,8 +24,6 @@ const settings = {
         password: process.env.MQTT_CLIENT_PASS
     },
     secure : {
-        port: process.env.MQTT_PORT !== undefined
-          ? parseInt(process.env.MQTT_PORT) : 8883,
         keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
         certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.pem",
     }
