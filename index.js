@@ -22,12 +22,13 @@ const settings = {
         clientId: process.env.MQTT_CLIENT_ID || 'dcd-mqtt',
         username: process.env.MQTT_CLIENT_USER,
         password: process.env.MQTT_CLIENT_PASS
-    },
-    secure : {
-        keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
-        certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.pem",
     }
 };
+
+// secure : {
+//     keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
+//       certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.pem",
+// }
 
 const onReady = () => {
     logger.info('Mosca server is up and running');
