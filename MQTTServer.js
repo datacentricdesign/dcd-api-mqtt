@@ -46,10 +46,10 @@ class MQTTServer {
       return callback(null, true);
     }
 
-    const resource = 'dcd:'
+    let resource = 'dcd:'
       + topic.substr(1).split('/').join(':').replace('#', '<.*>');
     if (resource.startsWith("dcd:things:dcd:things:")) {
-      resource.replace("dcd:things:dcd:things:", "dcd:things:");
+      resource = resource.replace("dcd:things:dcd:things:", "dcd:things:");
     }
 
     const acp = {
@@ -77,7 +77,7 @@ class MQTTServer {
       return callback(null, true);
     }
 
-    const resource = 'dcd:' + topic.substr(1).split('/').join(':');
+    let resource = 'dcd:' + topic.substr(1).split('/').join(':');
     if (resource.startsWith("dcd:things:dcd:things:")) {
       resource.replace("dcd:things:dcd:things:", "dcd:things:");
     }
