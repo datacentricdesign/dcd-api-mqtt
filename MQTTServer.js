@@ -79,7 +79,7 @@ class MQTTServer {
 
     let resource = 'dcd:' + topic.substr(1).split('/').join(':');
     if (resource.startsWith("dcd:things:dcd:things:")) {
-      resource.replace("dcd:things:dcd:things:", "dcd:things:");
+      resource = resource.replace("dcd:things:dcd:things:", "dcd:things:");
     }
 
     const acp = {
