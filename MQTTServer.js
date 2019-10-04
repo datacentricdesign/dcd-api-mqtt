@@ -16,11 +16,11 @@ class MQTTServer {
    * @param onConnected
    * @param auth
    */
-  constructor(settings, onReady, onConnected, auth) {
+  constructor(settings, onReady, onConnected, model) {
     this.settings = settings;
     this.onReady = onReady;
     this.onConnected = onConnected;
-    this.auth = auth;
+    this.model = model;
   }
 
   /**
@@ -57,7 +57,7 @@ class MQTTServer {
 
     callback(null, true);
 
-    this.auth.wardenSubject(acp)
+    this.model.policies.check(acp)
       .then(() => {
         logger.debug('authorised to subscribe on ' + topic);
         callback(null, true);
@@ -84,7 +84,7 @@ class MQTTServer {
 
     callback(null, true);
 
-    this.auth.wardenSubject(acp)
+    this.model.policies.check(acp)
       .then(() => {
         logger.debug('authorised to publish on ' + topic);
         callback(null, true);
@@ -108,7 +108,7 @@ class MQTTServer {
       logger.debug('NOT DCD client mqtt');
     }
 
-    this.auth.checkJWTAuth(password, username)
+    this.model.auth.checkJWTAuth(password, username)
       .then(() => {
         client.user = {};
         client.user.subject = username;

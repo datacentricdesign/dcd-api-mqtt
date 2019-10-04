@@ -43,5 +43,5 @@ const onConnected = (client) => {
     logger.info('New connection: ', client.id);
 };
 
-const mqttServer = new MQTTServer(settings, onReady, onConnected, model.auth);
+const mqttServer = new MQTTServer(settings, onReady, onConnected, model);
 mqttServer.start();
