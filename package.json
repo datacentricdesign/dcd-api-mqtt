@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/datacentricdesign/dcd-api-mqtt#README",
   "dependencies": {
-    "dcd-model": "0.0.190-grant-revoke",
+    "dcd-model": "0.0.191-grant-revoke",
     "log4js": "5.1.0",
     "mosca": "2.8.3",
     "mqtt": "3.0.0"
