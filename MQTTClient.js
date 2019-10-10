@@ -13,14 +13,14 @@ const MQTT = require('mqtt');
 class MQTTClient {
 
     constructor(settings, model) {
-        this.port = 8883;
+        this.port = settings.port;
         this.host = settings.host;
         this.settings = settings.client;
         this.model = model;
     }
 
     connect() {
-        const url = 'mqtts://' + this.host + ':' + this.port;
+        const url = 'mqtt://' + this.host + ':' + this.port;
         logger.debug('MQTT connect: ' + url);
         this.client = MQTT.connect(url, this.settings);
         this.client.on('connect', onMQTTConnect.bind(this));

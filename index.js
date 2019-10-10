@@ -27,6 +27,7 @@ const settings = {
         name: "dcd-api-mqtt",
         level: "debug",
     },
+    allowNonSecure: true,
     secure : {
         port: 8883,
         keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
