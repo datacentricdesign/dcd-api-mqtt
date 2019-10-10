@@ -26,7 +26,7 @@ const settings = {
     secure : {
         port: 8883,
         keyPath: process.env.KEY_PATH || "/etc/certs/tls-key.pem",
-        certPath: process.env.CERT_PATH || "/etc/certs/tls-crt.pem",
+        certPath: process.env.CERT_PATH || "/etc/certs/tls-cert.pem",
     }
 };
 
