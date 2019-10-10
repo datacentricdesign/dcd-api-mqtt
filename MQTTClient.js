@@ -13,7 +13,7 @@ const MQTT = require('mqtt');
 class MQTTClient {
 
     constructor(settings, model) {
-        this.port = settings.port;
+        this.port = 8883;
         this.host = settings.host;
         this.settings = settings.client;
         this.model = model;
