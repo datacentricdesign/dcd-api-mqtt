@@ -14,7 +14,7 @@ const model = new DCDModel();
 const settings = {
     host: process.env.MQTT_HOST || 'mqtt',
     port: process.env.MQTT_PORT !== undefined
-      ? parseInt(process.env.MQTT_PORT) : 8883,
+      ? parseInt(process.env.MQTT_PORT) : 1883,
     client: {
         keepalive: 1000,
         protocolId: 'MQIsdp',
@@ -22,13 +22,13 @@ const settings = {
         clientId: process.env.MQTT_CLIENT_ID || 'dcd-mqtt',
         username: process.env.MQTT_CLIENT_USER,
         password: process.env.MQTT_CLIENT_PASS
+    },
+    secure : {
+        port: 8883,
+        keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
+        certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.pem",
     }
 };
-
-// secure : {
-//     keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
-//       certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.pem",
-// }
 
 const onReady = () => {
     logger.info('Mosca server is up and running');
