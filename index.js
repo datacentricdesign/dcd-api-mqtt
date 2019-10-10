@@ -25,8 +25,8 @@ const settings = {
     },
     secure : {
         port: 8883,
-        keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
-        certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.crt",
+        keyPath: process.env.KEY_PATH || "/etc/certs/tls-key.pem",
+        certPath: process.env.CERT_PATH || "/etc/certs/tls-crt.pem",
     }
 };
 
