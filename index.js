@@ -23,6 +23,10 @@ const settings = {
         username: process.env.MQTT_CLIENT_USER,
         password: process.env.MQTT_CLIENT_PASS
     },
+    logger: {
+        name: "secureExample",
+        level: "debug",
+    },
     secure : {
         port: 8883,
         keyPath: process.env.KEY_PATH || "/etc/certs/tls-key.pem",
