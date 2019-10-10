@@ -20,7 +20,7 @@ class MQTTClient {
     }
 
     connect() {
-        const url = 'mqtt://' + this.host + ':' + this.port;
+        const url = 'mqtts://' + this.host + ':' + this.port;
         logger.debug('MQTT connect: ' + url);
         this.client = MQTT.connect(url, this.settings);
         this.client.on('connect', onMQTTConnect.bind(this));
