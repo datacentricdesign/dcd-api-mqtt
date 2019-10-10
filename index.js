@@ -24,13 +24,13 @@ const settings = {
         password: process.env.MQTT_CLIENT_PASS
     },
     logger: {
-        name: "secureExample",
+        name: "dcd-api-mqtt",
         level: "debug",
     },
     secure : {
         port: 8883,
-        keyPath: process.env.KEY_PATH || "/etc/certs/tls-key.pem",
-        certPath: process.env.CERT_PATH || "/etc/certs/tls-cert.pem",
+        keyPath: process.env.KEY_PATH || "/etc/certs/dcd-hub.key",
+        certPath: process.env.CERT_PATH || "/etc/certs/dcd-hub.pem",
     }
 };
 
