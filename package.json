@@ -1,6 +1,6 @@
 {
   "name": "dcd-api-mqtt",
-  "version": "0.1.0-dev",
+  "version": "0.1.1-dev",
   "description": "An NodeJS MQTT API for the Data-Centric Design Hub",
   "main": "index.js",
   "scripts": {
