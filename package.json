@@ -1,6 +1,6 @@
 {
   "name": "dcd-api-mqtt",
-  "version": "0.1.1-dev",
+  "version": "0.1.0-dev",
   "description": "An NodeJS MQTT API for the Data-Centric Design Hub",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/datacentricdesign/dcd-api-mqtt#README",
   "dependencies": {
-    "dcd-model": "0.1.0-dev",
+    "dcd-model": "0.1.2-dev",
     "log4js": "5.3.0",
     "mosca": "2.8.3",
     "mqtt": "3.0.0"
