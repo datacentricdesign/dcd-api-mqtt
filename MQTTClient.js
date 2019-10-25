@@ -59,6 +59,7 @@ function onMQTTMessage(topic, message) {
     if (topicArray.length === 5 && topicArray[1] === 'things' && topicArray[3] === 'properties') {
         if (jsonMessage.id === topicArray[4]) {
             logger.debug('update property');
+            jsonMessage.entityId = topicArray[2];
             this.model.properties.updateValues(jsonMessage)
                 .catch( (error) => logger.error(error));
         }
